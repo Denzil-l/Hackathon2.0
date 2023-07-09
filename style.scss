@@ -19,7 +19,9 @@ body {
 
 .start-container,
 .main-container,
-.catalog-container {
+.catalog-container,
+.exercise-container,
+.quiz-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,6 +40,8 @@ body {
     background: url('../source/BG_Earth2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+
 
     &__title {
         margin-top: 250px;
@@ -232,6 +236,173 @@ body {
     }
 }
 
+.exercise-container {
+    display: none;
+    top: -100%;
+
+    .text {
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: 400;
+        transition: .3s;
+    }
+
+    .text:hover {
+        text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+
+    }
+
+    &__north,
+    &__zodiac,
+    &__south {
+        width: 100%;
+        height: 40%;
+    }
+
+    &__north {
+        background: url('../source/north.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    &__zodiac {
+        width: 100%;
+        height: 20%;
+        position: relative;
+        z-index: 9;
+        border: 4px solid #222;
+
+    }
+
+    &__loop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        z-index: 11;
+        background: url('../source/Zodiac.jpeg');
+        background-repeat: repeat-x;
+        animation: ZodiacLoop 60s linear infinite;
+    }
+
+    &__south {
+        background: url('../source/south.jpg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+
+    &__zodiac-text {
+        position: absolute;
+        top: 0;
+        left: -2%;
+        z-index: 12;
+        width: 104%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: .3s;
+    }
+}
+
+.quiz-container {
+
+    display: none;
+    top: -100%;
+
+    .text {
+        cursor: pointer;
+        font-size: 35px;
+        font-weight: 400;
+        transition: .3s;
+    }
+
+    .text:hover {
+        text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+
+    }
+
+    &__top {
+        display: flex;
+        width: 100%;
+        height: 70%;
+    }
+
+    &__left {
+        border-right: 2px solid #222;
+        background: url('../source/left.jpg');
+    }
+
+    &__center {
+        background: url('../source/center.jpg');
+    }
+
+    &__right {
+        border-left: 2px solid #222;
+        background: url('../source/right.jpg');
+    }
+
+    &__bottom {
+        border-top: 2px solid #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30%;
+        background: url('../source/bottom.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__left,
+    &__center,
+    &__right {
+        height: 100%;
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__right {
+        width: 33.4%;
+    }
+
+}
+
+.back-button {
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    width: 40px;
+    height: 40px;
+    z-index: 13;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.back-button:hover {
+    text-shadow: 1px 3px 0 #0be2f1, 1px 13px 5px #aba8a8;
+}
+
+.text {}
+
 
 
 
@@ -259,6 +430,16 @@ body {
     }
 }
 
+@keyframes zoomBottom2Main {
+    0% {
+        top: 100%
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
 @keyframes zoomTopStart {
     0% {
         top: 0
@@ -266,6 +447,16 @@ body {
 
     100% {
         top: 100%;
+    }
+}
+
+@keyframes zoomTopContainer {
+    0% {
+        top: 0
+    }
+
+    100% {
+        top: -100%;
     }
 }
 
@@ -320,6 +511,40 @@ body {
 
     }
 
+}
+
+@keyframes ZodiacLoop {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -99%;
+    }
+}
+
+@keyframes ZodiacShirma {
+    0% {
+        opacity: 0;
+        background: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background: rgba($color: black, $alpha: 0.5);
+    }
+}
+
+@keyframes ZodiacShirmaReverse {
+    0% {
+        opacity: 1;
+        background: rgba($color: black, $alpha: 0.5);
+    }
+
+    100% {
+        opacity: 0;
+        background: transparent;
+    }
 }
 
 

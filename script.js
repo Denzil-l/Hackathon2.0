@@ -14,7 +14,17 @@ const Options = document.querySelectorAll('.main-container__options')
 const Shadow = document.querySelector('.main-container__shadow')
 //Catalog-Container's ellemens:
 const CatalogContainer = document.querySelector('.catalog-container')
-
+// Exercise-Container's ellements:
+const ExerciseContainer = document.querySelector('.exercise-container')
+const north = document.querySelector('.exercise-container__north')
+const zodiac = document.querySelector('.exercise-container__zodiac')
+const south = document.querySelector('.exercise-container__south')
+const zodiac_text = document.querySelector('.exercise-container__zodiac-text')
+// Quiz-Container's ellements:
+const QuizContainer = document.querySelector('.quiz-container')
+// Back-Button:
+const back = document.querySelectorAll('.back-button')
+const allPages = [CatalogContainer,ExerciseContainer,QuizContainer]
 
 startButton.addEventListener('click', ()=>{
     startTitle.style.opacity = 0
@@ -62,6 +72,15 @@ Option2.addEventListener('click', ()=>{
     Option1.style.transform = 'rotateZ(180deg) translate(25%, -30%)'
     Option2.style.transform = 'rotateZ(180deg) translate(50%, 35%)'
     Option3.style.transform = 'rotateZ(180deg) translate(90%, -20%)'
+
+    setTimeout(()=>{
+        MainContainer.style.animation = 'MainBGReverse 1s linear forwards, zoomTopMain 2s ease-in forwards'
+        QuizContainer.style.display = 'flex'
+        QuizContainer.style.animation = 'zoomBottomMain 2s ease-in forwards'
+    },2000)
+    setTimeout(()=>{
+        MainContainer.style.display = 'none'
+    },3000)
 })
 Option3.addEventListener('click', ()=>{
     MainCircle.style.transition = '1s'
@@ -72,5 +91,31 @@ Option3.addEventListener('click', ()=>{
     Option1.style.transform = 'rotateZ(45deg) translate(35%, 100%)'
     Option2.style.transform = 'rotateZ(45deg) translate(-25%, -50%)'
     Option3.style.transform = 'rotateZ(45deg) translate(-75%, 75%)'
+
+    setTimeout(()=>{
+        MainContainer.style.animation = 'MainBGReverse 1s linear forwards, zoomTopMain 2s ease-in forwards'
+        ExerciseContainer.style.display = 'flex'
+        ExerciseContainer.style.animation = 'zoomBottomMain 2s ease-in forwards'
+    },2000)
+    setTimeout(()=>{
+        MainContainer.style.display = 'none'
+    },3000)
 })
 
+zodiac_text.addEventListener('mouseover', ()=>{
+    zodiac_text.style.animation = 'ZodiacShirma 0.5s linear forwards'
+})
+zodiac_text.addEventListener('mouseout', ()=>{
+    zodiac_text.style.animation = 'ZodiacShirmaReverse 0.5s linear forwards'
+})
+
+back.forEach((element, index) => {
+    element.addEventListener('click', ()=>{            
+            MainContainer.style.animation = 'zoomBottom2Main 2s ease-in forwards,MainBG 2s ease-in forwards'
+            allPages[index].style.animation = 'zoomTopContainer 2s ease-in forwards'
+            setTimeout(() => {
+                MainContainer.style.display = 'flex'
+                allPages[index].style.display = 'none'
+            }, 2000);
+    })
+});
