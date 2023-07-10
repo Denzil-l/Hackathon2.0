@@ -7,13 +7,9 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 150%;
   color: white;
   font-family: "Montserrat";
   position: relative;
-  animation: MainContainerMoving 60s ease-in-out infinite;
 }
 
 .start-container,
@@ -242,6 +238,7 @@ body {
   height: 100%;
   z-index: 11;
   background: url("../source/Zodiac.jpeg");
+  background-size: contain;
   background-repeat: repeat-x;
   animation: ZodiacLoop 60s linear infinite;
 }
@@ -269,13 +266,13 @@ body {
   transition: 0.3s;
 }
 .exercise-container .exercise-block {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: 100%;
   z-index: 11;
-  display: flex;
   background: transparent;
   align-items: center;
   margin-left: 35vw;
@@ -467,9 +464,15 @@ body {
   0% {
     opacity: 0;
     background: url("../source/BG3.jpeg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 200%;
   }
   100% {
     background: url("../source/BG3.jpeg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 200%;
     opacity: 1;
   }
 }
