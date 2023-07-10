@@ -102,12 +102,12 @@ Option3.addEventListener('click', ()=>{
     },3000)
 })
 
-zodiac_text.addEventListener('mouseover', ()=>{
-    zodiac_text.style.animation = 'ZodiacShirma 0.5s linear forwards'
-})
-zodiac_text.addEventListener('mouseout', ()=>{
-    zodiac_text.style.animation = 'ZodiacShirmaReverse 0.5s linear forwards'
-})
+// zodiac_text.addEventListener('mouseover', ()=>{
+//     zodiac_text.style.animation = 'ZodiacShirma 0.5s linear forwards'
+// })
+// zodiac_text.addEventListener('mouseout', ()=>{
+//     zodiac_text.style.animation = 'ZodiacShirmaReverse 0.5s linear forwards'
+// })
 
 back.forEach((element, index) => {
     element.addEventListener('click', ()=>{            
