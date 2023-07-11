@@ -1,0 +1,78 @@
+constellations = [
+    {
+        'name': 'Andromeda',
+        'description': 'Andromeda is one of the 48 constellations listed by the 2nd-century astronomer Ptolemy. It is located in the northern sky. The constellation is named after Andromeda, the princess from Greek mythology who was chained to a rock as a sacrifice to a sea monster but was eventually rescued by the hero Perseus.',
+        'features': ['Andromeda contains the famous Andromeda Galaxy, the nearest spiral galaxy to our Milky Way.', 'The constellation is home to several bright stars, including Alpheratz, Mirach, and Almach.', 'Andromeda is best observed in the autumn and winter months in the Northern Hemisphere.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Ursa Major',
+        'description': 'Ursa Major, also known as the Great Bear, is one of the most well-known and easily recognizable constellations in the night sky. It is visible year-round from the Northern Hemisphere and has been prominent in the mythology and folklore of many cultures.',
+        'features': ['The seven brightest stars in Ursa Major form the Big Dipper, a well-known asterism that is used for navigation and locating other celestial objects.', 'The star at the end of the handle of the Big Dipper is called the North Star or Polaris, which remains almost stationary in the sky and can be used to find the direction of north.', 'Ursa Major is associated with various mythological stories and legends, including the Greek myth of Callisto, who was transformed into a bear and placed in the sky by Zeus to protect her from the wrath of his jealous wife Hera.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Auriga',
+        'description': 'Auriga is a constellation in the northern hemisphere. Its name means "charioteer" in Latin. The constellation is associated with various mythological figures, including the Greek myth of Erichthonius, who was half-man and half-snake and invented the four-horse chariot.',
+        'features': ['Auriga contains the bright star Capella, which is one of the brightest stars in the night sky.', 'The constellation is home to several star clusters and nebulae, including the Flaming Star Nebula and the star cluster M38.', 'Auriga is best observed in the winter months in the Northern Hemisphere.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Boötes',
+        'description': 'Boötes is a constellation in the northern hemisphere. Its name means "herdsman" or "plowman" in Greek. The constellation is associated with various mythological figures, including the Greek myth of Arcas, who was transformed into the constellation by Zeus.',
+        'features': ['Boötes contains the bright star Arcturus, which is one of the brightest stars in the night sky.', 'The constellation is best observed in the spring and summer months in the Northern Hemisphere.', 'Boötes is part of the ancient Greek asterism known as the "Spring Triangle" along with the constellations Virgo and Corvus.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Coma Berenices',
+        'description': 'Coma Berenices is a constellation in the northern hemisphere. Its name means "Berenice\'s Hair" in Latin. The constellation is associated with the story of Queen Berenice II of Egypt, who offered her hair as a sacrifice to the gods for the safe return of her husband from war.',
+        'features': ['Coma Berenices is home to the Coma Cluster, a large cluster of galaxies located approximately 300 million light-years away from Earth.', 'The constellation is best observed in the spring and summer months in the Northern Hemisphere.', 'Coma Berenices is often depicted as a cluster of stars representing Queen Berenice\'s hair.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Canes Venatici',
+        'description': 'Canes Venatici is a constellation in the northern hemisphere. Its name means "hunting dogs" in Latin. The constellation is associated with the mythological hunting dogs, Asterion and Chara, who were placed in the sky by Zeus as a reward for their loyalty.',
+        'features': ['Canes Venatici contains several galaxies, including the famous Whirlpool Galaxy (M51) and the Sunflower Galaxy (M63).', 'The constellation is best observed in the spring and summer months in the Northern Hemisphere.', 'Canes Venatici is part of the ancient Greek asterism known as the "Big Dipper" along with the constellations Ursa Major and Ursa Minor.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Virgo',
+        'description': 'Virgo is a constellation in the northern hemisphere. Its name means "virgin" in Latin. The constellation is associated with various mythological figures, including the Greek goddess of agriculture and harvest, Demeter.',
+        'features': ['Virgo is home to the bright star Spica, which is one of the brightest stars in the night sky.', 'The constellation is part of the zodiac and is associated with the astrological sign Virgo.', 'Virgo is best observed in the spring and summer months in the Northern Hemisphere.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': True
+    },
+    {
+        'name': 'Delphinus',
+        'description': 'Delphinus is a constellation in the northern hemisphere. Its name means "dolphin" in Latin. The constellation is associated with the Greek myth of the dolphin that saved the musician Arion from drowning.',
+        'features': ['Delphinus contains the star Rotanev, which is the Latin spelling of the name Vega spelled backward.', 'The constellation is best observed in the summer months in the Northern Hemisphere.', 'Delphinus is often depicted as a dolphin leaping out of the water.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    },
+    {
+        'name': 'Draco',
+        'description': 'Draco is a constellation in the northern hemisphere. Its name means "dragon" in Latin. The constellation is associated with various mythological dragons, including the Greek dragon Ladon and the serpent slain by the hero Hercules.',
+        'features': ['Draco contains the star Thuban, which was the North Star during the time of the ancient Egyptians.', 'The constellation is best observed in the summer and autumn months in the Northern Hemisphere.', 'Draco is often depicted as a long, winding dragon in the sky.'],
+        'type': 'North',
+        'image': None,
+        'is_zodiac': False
+    }
+]
+Это продолжение списка созвездий, включающее следующие созвездия: Возничий, Волопас, Волосы Вероники, Геркулес, Гончие Псы, Дева, Дельфин и Дракон. Заметь, что я добавил некоторые особенности и описание для каждого соз
+
+
+

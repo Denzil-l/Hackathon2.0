@@ -24,6 +24,8 @@ const zodiac_text = document.querySelector('.exercise-container__zodiac-text')
 const textExerciseButtons = document.querySelectorAll('.exerciseButton')
 // Quiz-Container's ellements:
 const QuizContainer = document.querySelector('.quiz-container')
+const textQuizButtons = document.querySelectorAll('.quizButton')
+
 // Back-Button:
 const back = document.querySelectorAll('.back-button')
 const allPages = [CatalogContainer,ExerciseContainer,QuizContainer]
@@ -111,8 +113,15 @@ zodiac_text.addEventListener('mouseout', ()=>{
     zodiac_text.style.animation = 'ZodiacShirmaReverse 0.5s linear forwards'
 })
 textExerciseButtons.forEach((element,index) => {
-    element.addEventListener('click',async ()=>{
-        index == 0? await Study(North_constellations) : index == 1? await Study(South_constellations): await Study(Zodiac_constellations)
+    element.addEventListener('click', ()=>{
+        index == 0?  Study(North_constellations) : index == 1?  Study(South_constellations):  Study(Zodiac_constellations)
+
+    })
+    
+});
+textQuizButtons.forEach((element,index) => {
+    element.addEventListener('click', ()=>{
+        index == 0?  Quiz(North_constellations) : index == 1?  Quiz(South_constellations): index == 2 ?  Quiz(Zodiac_constellations) : Quiz(Zodiac_constellations)
 
     })
     
