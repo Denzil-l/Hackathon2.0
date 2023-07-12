@@ -30,22 +30,7 @@ const textQuizButtons = document.querySelectorAll('.quizButton')
 const back = document.querySelectorAll('.back-button')
 const allPages = [CatalogContainer,ExerciseContainer,QuizContainer]
 
-startButton.addEventListener('click', ()=>{
-    startTitle.style.opacity = 0
-    startButton.style.transition = '.5s'
-    startButton.style.opacity = 0
-    setTimeout(()=>{
-        startTitle.style.display = 'none'
-        startButton.style.display = 'none'
-        startContainer.style.animation = 'zoomTopStart 1s ease-in forwards'
-        setTimeout(()=>startContainer.style.display = 'none',1000)
-    },1000)
-    setTimeout(()=>{
-        Wrapper.style.animation = "WrapperBG 1s ease-in forwards,MainContainerMoving 60s ease-in-out infinite"
-        MainContainer.style.animation = 'zoomBottomMain 1s ease-in forwards,MainBG 1.5s 1s ease-in forwards'
-    },2000)
-    
-})
+
 Option1.addEventListener('click', ()=>{
     MainCircle.style.transition = '1.5s'
     Options.forEach(element => {

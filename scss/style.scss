@@ -47,16 +47,82 @@ body {
         transition: 1s;
     }
 
-    &__start {
+    &__authentication {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         transition: .3s;
         font-size: 30px;
         margin-top: 20px;
-        cursor: pointer;
+        min-width: 300px;
+
+
     }
 
-    &__start:hover {
-        text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+    .loginForm,
+    .RegisterForm {
+        margin-top: 50px;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        min-height: 200px;
+        min-width: 200px;
+        background: rgba($color: #333, $alpha: 0.5);
+        animation: MainBG .5s linear forwards;
+
+        input {
+            margin-top: 5px;
+            min-height: 20px;
+            border-radius: 5px;
+            background: transparent;
+            border: 1px solid gray;
+            color: white;
+            padding-left: 5px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        button {
+            border-radius: 5px;
+            padding: 5px 10px;
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 20px;
+            background: transparent;
+            border: 0;
+            color: white;
+            border: 2px solid gray;
+            transition: .3s;
+            font-size: 16px;
+
+        }
+
+        button:hover {
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.2);
+
+        }
     }
+
+    &__signin,
+    &__signup {
+        margin: 0 20px;
+        transition: .3s;
+    }
+
+    &__signin:hover,
+    &__signup:hover {
+        text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+
+    }
+
+
 }
 
 .main-container {

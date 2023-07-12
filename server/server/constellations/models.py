@@ -13,7 +13,7 @@ class Constellation(models.Model):
     image = models.ImageField(upload_to='constellation_images')
     is_zodiac = models.BooleanField()
     def __str__(self):
-                return f"{self.user}"
+                return f"{self.name}"
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
@@ -25,3 +25,5 @@ class UserConstellation(models.Model):
 
     def __str__(self):
         return f"{self.user.user.username} {self.constellation.name}"
+    
+
