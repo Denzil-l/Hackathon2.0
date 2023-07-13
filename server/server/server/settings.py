@@ -17,9 +17,31 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'constellations',
     'rest_framework',
-    'corsheaders'
-
+    'rest_framework_simplejwt',
+    'corsheaders',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # Замените на URL вашего фронтенда
+]  # Укажите здесь все разрешенные домены фронтенда
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

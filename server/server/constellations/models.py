@@ -27,3 +27,11 @@ class UserConstellation(models.Model):
         return f"{self.user.user.username} {self.constellation.name}"
     
 
+class UserConstellation2(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    constellation = models.ForeignKey(Constellation, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user.username} {self.constellation.name}"
+    
+

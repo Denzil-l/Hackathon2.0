@@ -248,8 +248,8 @@ body {
             border-bottom: 1px solid #222;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 0px 5px;
+            justify-content: flex-start;
+            padding-left: 5px;
             color: gainsboro;
             transition: .3s;
             position: relative;
@@ -273,10 +273,12 @@ body {
         height: 100%;
     }
 
-    &__big-image {
+    &__wrapper {
         width: 100%;
-        height: 80%;
+        height: 100%;
+        overflow: hidden;
         position: relative;
+        border-radius: 15px;
 
         img {
             position: absolute;
@@ -286,18 +288,67 @@ body {
         }
     }
 
+    &__big-image {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+
+    }
+
     &__bottom {
         background: rgba($color: #000000, $alpha: 0.5);
 
         width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    &__bottom-top {
+        width: 100%;
         height: 20%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        border-top: 2px solid #222;
+        justify-content: space-between;
     }
+
+    &__name,
+    &__type,
+    &__isZodiac,
+    &__description,
+    &__features {
+        border: 1px solid #222;
+    }
+
+
+    &__name,
+    &__type,
+    &__isZodiac {
+        width: 33.3%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__description,
+    &__features {
+        font-size: 14px;
+        padding: 5px;
+        width: 100%;
+        height: 40%;
+    }
+
 }
+
+
+
+
+
 
 .exercise-container {
     display: none;
@@ -439,8 +490,10 @@ body {
             height: 40%;
             width: 100%;
             position: relative;
+            background-color: #070707;
 
             img {
+
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -484,6 +537,7 @@ body {
 
         &__description {
             height: 15%;
+            padding-top: 40px;
         }
 
         &__features {
@@ -559,10 +613,24 @@ body {
 
     }
 
+    .result {
+        font-size: 22px;
+        text-align: center;
+    }
+
     &__top {
         display: flex;
         width: 100%;
         height: 70%;
+        position: relative;
+
+        .timer {
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
     }
 
     &__left {
@@ -611,7 +679,6 @@ body {
 
     .quiz-block {
         display: none;
-
         position: absolute;
         top: 0;
         left: 0;
@@ -622,6 +689,26 @@ body {
         align-items: center;
         margin-left: 35vw;
         transition: .5s;
+
+        &__timer,
+        &__score,
+        &__message {
+            border-bottom: 2px solid #222;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+        }
+
+
+
+        &__message {
+            flex: 1 1 auto;
+            padding: 10px;
+            min-height: 60px;
+        }
+
 
         .current {
             transform: scale(1);
@@ -669,6 +756,8 @@ body {
             position: relative;
 
             img {
+                background-color: #070707;
+
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -742,7 +831,8 @@ body {
         }
 
         &__previous,
-        &__next {
+        &__next,
+        &__result {
             cursor: pointer;
             background: transparent;
             padding: 10px;
@@ -757,7 +847,8 @@ body {
         }
 
         &__previous:hover,
-        &__next:hover {
+        &__next:hover,
+        &__result:hover {
             box-shadow: 0px 0px 12px 7px rgba(255, 255, 255, 0.3);
             letter-spacing: 1.5px;
         }
